@@ -1,0 +1,52 @@
+<head>
+  <title>iron-transit-demo</title>
+</head>
+
+<body>
+</body>
+<template name="MasterLayout">
+  {{> NavBar}}
+  <div class="container-fluid">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="One">
+  <div class="row one">
+    <div class="col-sm-12">
+      <h1>One</h1>
+    </div>
+
+  </div>
+</template>
+
+<template name="Two">
+  <div class="row two">
+    <div class="col-sm-12">
+      <h1>Two</h1>
+    </div>
+
+  </div>
+</template>
+
+<template name="NavBar">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Iron Transit</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{{pathFor route='one'}}">one</a></li>
+          <li><a href="{{pathFor route='two'}}">two</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
